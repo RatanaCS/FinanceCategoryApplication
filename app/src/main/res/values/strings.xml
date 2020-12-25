@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FinanceCategoryApplication</string>
+    <string name="app_name_v1">FiCat App</string>
 </resources>
