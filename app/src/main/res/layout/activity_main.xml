@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ltHome"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/financial_economic_rise_curve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnKategori"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/colorYellow"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Category"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ltHome" />
+
+    <Button
+        android:id="@+id/btnIncome"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorGreen"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Income"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnKategori" />
+
+    <Button
+        android:id="@+id/btnExpenses"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/colorRed"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Expenses"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnKategori" />
+
+    <TextView
+        android:id="@+id/tvBalance"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="balance"
+        android:textColor="#FFFF"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

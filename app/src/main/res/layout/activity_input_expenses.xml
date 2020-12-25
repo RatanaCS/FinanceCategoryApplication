@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".expenses.InputExpensesActivity"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <EditText
+        android:id="@+id/etId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="id income..."
+        android:fontFamily="@font/montserrat"
+        android:enabled="false"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edit_text"/>
+
+    <EditText
+        android:id="@+id/etKategori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="kategori..."
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edit_text"/>
+
+    <EditText
+        android:id="@+id/etJumlah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="jumlah..."
+        android:fontFamily="@font/montserrat"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edit_text"/>
+
+    <EditText
+        android:id="@+id/etNominal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nominal..."
+        android:fontFamily="@font/montserrat"
+        android:inputType="number"
+        android:text="0"
+        android:enabled="false"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edit_text"/>
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="2020-12-20"
+        android:fontFamily="@font/montserrat"
+        android:focusable="false"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_edit_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Simpan"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_btn_primary"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bg_btn_light_grey"/>
+
+    </LinearLayout>
+
+</LinearLayout>
