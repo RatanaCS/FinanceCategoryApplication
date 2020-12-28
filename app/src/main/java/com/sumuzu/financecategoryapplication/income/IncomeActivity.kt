@@ -18,7 +18,6 @@ import com.sumuzu.financecategoryapplication.config.NetworkModule
 import com.sumuzu.financecategoryapplication.model.ResponseAction
 import com.sumuzu.financecategoryapplication.model.getDataIncome.DataItemIncome
 import com.sumuzu.financecategoryapplication.model.getDataIncome.ResponseGetDataIncome
-import kotlinx.android.synthetic.main.activity_expenses.*
 import kotlinx.android.synthetic.main.activity_income.*
 import kotlinx.android.synthetic.main.activity_income.tvJumlahNominal
 import retrofit2.Call
@@ -39,7 +38,15 @@ class IncomeActivity : AppCompatActivity() {
             progressIncome.visibility = View.VISIBLE
         }
 
-        showData()
+        if(isConnect()){
+            showData()
+        }else{
+            progressIncome.visibility = View.GONE
+            tvJumlahNominal.text = "Total Income tidak tersedia, mohon periksa internet Anda"
+            Toast.makeText(this,"device tidak connect dengan intenet",Toast.LENGTH_SHORT).show()
+        }
+
+
 
     }
 

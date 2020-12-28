@@ -1,7 +1,9 @@
 package com.sumuzu.financecategoryapplication.category
 
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -31,8 +33,12 @@ class KategoriActivity : AppCompatActivity() {
             progressKategori.visibility = View.VISIBLE
         }
 
-        showData()
-
+        if(isConnect()){
+            showData()
+        }else{
+            progressKategori.visibility = View.GONE
+            Toast.makeText(this,"device tidak connect dengan intenet",Toast.LENGTH_SHORT).show()
+        }
 
     }
 
@@ -113,5 +119,11 @@ class KategoriActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         showData()
+    }
+
+    fun isConnect() : Boolean{
+        val connect : ConnectivityManager =getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        return connect.activeNetworkInfo != null && connect.activeNetworkInfo.isConnected
     }
 }

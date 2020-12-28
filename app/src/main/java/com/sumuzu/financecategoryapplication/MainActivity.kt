@@ -1,6 +1,8 @@
 package com.sumuzu.financecategoryapplication
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -41,7 +43,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        showData()
+        if(isConnect()){
+            showData()
+        }else{
+            tvBalance.text = "Balance tidak tersedia, mohon periksa internet Anda"
+            Toast.makeText(this,"device tidak connect dengan intenet",Toast.LENGTH_SHORT).show()
+        }
 
     }
 
@@ -75,6 +82,12 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         showData()
+    }
+
+    fun isConnect() : Boolean{
+        val connect : ConnectivityManager =getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        return connect.activeNetworkInfo != null && connect.activeNetworkInfo.isConnected
     }
 
 }
